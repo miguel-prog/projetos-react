@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de uso de elemento no React</title>
+</head>
+
+<body>
+    <div id="conteiner"></div>
+
+    <!-- babel é necessário para lidar com o JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- import react.js -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- import react-dom.js -->
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script>
+
+    <script type="text/babel">
+        const itensLista = [{
+                id: 1,
+                nome: 'Arroz'
+            },
+            {
+                id: 2,
+                nome: 'Feijão'
+            },
+            {
+                id: 3,
+                nome: 'Salada'
+            },
+        ];
+
+        // JSX:
+        const minhaLista = <ul>
+                {itensLista.map(item => (
+                    <li key={item.id}>{item.nome}</li>
+                ))}
+            </ul>;
+
+        ReactDOM.render(
+            minhaLista,
+            document.getElementById('conteiner')
+        );
+    </script>
+</body>
+
+</html>

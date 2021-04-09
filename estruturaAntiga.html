@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" onchange="altereConteudoBotao1(event)" />
+    <button type="button" onclick="clicou(event)" id="botao1" vincular="botao1.texto">Clique aqui</button>
+    <button type="button" onclick="clicou(event)" id="botao2">Clique aqui</button>
+    <button type="button" onclick="clicou(event)" id="botao3">Clique aqui</button>
+
+    <script>
+        //let elementosVinculados = document.querySelectorAll("[vincular]");
+        //for(let elementoVinculado : elementosVinculados) {
+        // let objeto = elementoVinculado.getAttribute('vincular');
+        // Alterar objeto para que quando sua propriedade for alterada, ele execute um código
+        // para atualizar a visão.
+        //}
+
+        const botao1 = {
+            texto: 'Clique aqui!'
+        }
+
+        function altereConteudoBotao1(e) {
+            botao1.texto = e.target.value;
+        }
+
+        function clicou(e) {
+            //e.target
+            console.log(e.target);
+            botao1.texto = "Clicado";
+        }
+
+        /*document.getElementById("botao1").addEventListener('click', function(e) {
+
+                });*/
+    </script>
+
+</body>
+
+</html>

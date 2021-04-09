@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de contatos</title>
+    <link rel="stylesheet" href="./contatos.css" />
+</head>
+
+<body>
+    <div id="formulario" class="js-escondido">
+        <form class='criar-contato-form'>
+            <div class='criar-contato-detalhes'>
+                <input type='text' name='nome' placeholder='Nome' id="nome" />
+                <input type='text' name='telefone' placeholder='Telefone' id="telefone" />
+                <input type='text' name='enderecoImagem' placeholder='Endereço relativo da imagem'
+                    id="enderecoImagem" />
+                <button type="button" id="adicionarContato">Adicionar contato</button>
+            </div>
+        </form>
+    </div>
+    <div id="lista">
+        <input type="text" class="buscar-contatos" id="buscarContatos" />
+        <button type="button" class="adicionar-contato" id="abrirFormularioContato"></button>
+        <ol class="contato-lista" id="contatoLista">
+            <li class="contato-lista-item">
+                <div class="contato-avatar" style="background-image: url(./fotos/chaves.jpg)"></div>
+                <div class="contato-detalhes">
+                    <p>Chaves</p>
+                    <p>+52 9876-1110</p>
+                </div>
+                <button class="contato-remover js-contato-remover">
+                    Remover
+                </button>
+            </li>
+            <li class="contato-lista-item">
+                <div class="contato-avatar" style="background-image: url(./fotos/chiquinha.jpg)"></div>
+                <div class="contato-detalhes">
+                    <p>Chiquinha</p>
+                    <p>+52 9876-1112</p>
+                </div>
+                <button class="contato-remover js-contato-remover">
+                    Remover
+                </button>
+            </li>
+            <li class="contato-lista-item">
+                <div class="contato-avatar" style="background-image: url(./fotos/florinda.jpg)"></div>
+                <div class="contato-detalhes">
+                    <p>Dona Florinda</p>
+                    <p>+52 9876-1119</p>
+                </div>
+                <button class="contato-remover js-contato-remover">
+                    Remover
+                </button>
+            </li>
+            <li class="contato-lista-item">
+                <div class="contato-avatar" style="background-image: url(./fotos/quico.jpg)"></div>
+                <div class="contato-detalhes">
+                    <p>Quico</p>
+                    <p>+52 9876-1113</p>
+                </div>
+                <button class="contato-remover js-contato-remover">
+                    Remover
+                </button>
+            </li>
+            <li class="contato-lista-item">
+                <div class="contato-avatar" style="background-image: url(./fotos/barriga.jpg)"></div>
+                <div class="contato-detalhes">
+                    <p>Sr. Barriga</p>
+                    <p>+52 9876-1114</p>
+                </div>
+                <button class="contato-remover js-contato-remover">
+                    Remover
+                </button>
+            </li>
+            <li class="contato-lista-item">
+                <div class="contato-avatar" style="background-image: url(./fotos/madruga.jpg)"></div>
+                <div class="contato-detalhes">
+                    <p>Sr. Madruga</p>
+                    <p>+52 9876-1115</p>
+                </div>
+                <button class="contato-remover js-contato-remover">
+                    Remover
+                </button>
+            </li>
+        </ol>
+    </div>
+
+    <script src="./contatos.js"></script>
+
+</body>
+
+</html>
